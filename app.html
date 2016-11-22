@@ -15,17 +15,33 @@ and open the template in the editor.
         <script src="src/controllers/myController.js" type="text/javascript"></script>
         <script src="src/services/elementProvider.js" type="text/javascript"></script>
     </head>
-    <body ng-app="todoList"  class="w3-card-2">
+    <body ng-app="todoList">
         
-        <div ng-controller="myController" style="max-width:400px;">
+        <div ng-controller="myController" class="w3-card-2" style="max-width:400px;">
             <header class="w3-container w3-light-grey w3-padding-16">
-                <h2>My TODO list</h2>
+                <h2>My ToDo list</h2>
             </header>
             
-            <ul ng-repeat="element in elements" class="w3-ul">
-                <li>{{element}}</li>
+            <ul class="w3-ul">
+                <li ng-repeat="element in elements" class="w3-padding-16">
+                    {{element}}
+                    <span ng-click="removeElement($index)" style="cursor:pointer;" class="w3-right w3-margin-right">X</span>
+                </li>
             </ul>
             
+            <div class="w3-container w3-light-grey w3-padding-16">
+                <div class="w3-row w3-margin-top">
+                    <form name="form" id="form" novalidate>
+                        <div class="w3-col s10">
+                            <input ng-model="newElement" placeholder="Ajouter une tâche" class="w3-input w3-border w3-padding" required />
+                        </div>
+                        <div class="w3-col s2">
+                            <button ng-click="insertElement()" class="w3-btn w3-padding">Add</button>
+                        </div>
+                    </form>
+                </div>
+                <p class="w3-padding-left w3-text-red">{{errorText}}</p>
+            </div>
         </div>
         
     </body>

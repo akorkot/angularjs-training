@@ -4,5 +4,6 @@
  * and open the template in the editor.
  */
 
+'use strict';
 
 var app = angular.module("todoList", []);

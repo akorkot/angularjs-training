@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
+'use strict';
 
 var elements = [
     "Apprendre Angular JS",
-    "Apprendre Symfony 2",
-    "Apprendre Zend Framework"
+    "Apprendre Symfony 2"
 ];
 
 app
@@ -16,6 +16,15 @@ app
             this.getElements = function(){
                 return elements;
             };
-    
+            this.addElement = function(element){
+                elements.push(element);
+                return elements;
+            };
+            this.deleteElement = function(index){
+                
+                elements.splice(index, 1);
+                console.log(index);
+                return elements;
+            };
         });
 
