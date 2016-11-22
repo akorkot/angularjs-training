@@ -6,5 +6,8 @@
 
 'use strict';
 
-var app = angular.module("mainApp", []);
-var navigationMenuApp = angular.module("navigationMenu", ["mainApp"]);
+
+var navigationMenuApp = angular.module("navigationMenu", []);
+var inlineEditorApp = angular.module("inlineEditor", []);
+
+var app = angular.module("mainApp", ["navigationMenu", "inlineEditor"]);

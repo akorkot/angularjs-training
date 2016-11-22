@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 
+'use strict';
 
-app
+navigationMenuApp
         .controller("navigationMenuController", function($scope) {
            $scope.someText = "Je suis fonctionnel";
            
-           $scope.active = "Home";
+           $scope.active = "home";
         });
