@@ -7,7 +7,7 @@
 'use strict';
 
 app
-        .controller("myController", function($scope, elementProvider){
+        .controller("todoListController", function($scope, elementProvider){
             $scope.elements = elementProvider.getElements();
             
             
@@ -35,3 +35,5 @@ app
                 $scope.errorText = "";
             }
         });
+        
+        

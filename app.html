@@ -10,14 +10,24 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="assets/style.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Angular JS - Plugins -->
         <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+        
+        <!-- App JS -->
         <script src="app.js" type="text/javascript"></script>
-        <script src="src/controllers/myController.js" type="text/javascript"></script>
+        
+        <!-- Controllers -->
+        <script src="src/controllers/todoListController.js" type="text/javascript"></script>
+        <script src="src/controllers/menuNavigationController.js" type="text/javascript"></script>
+        
+        
+        <!-- Services -->
         <script src="src/services/elementProvider.js" type="text/javascript"></script>
     </head>
-    <body ng-app="todoList">
+    <body ng-app="mainApp">
         
-        <div ng-controller="myController" class="w3-card-2" style="max-width:400px;">
+        <div ng-controller="todoListController" class="w3-card-2" style="max-width:400px;">
             <header class="w3-container w3-light-grey w3-padding-16">
                 <h2>My ToDo list</h2>
             </header>
@@ -43,6 +53,20 @@ and open the template in the editor.
                 <p class="w3-padding-left w3-text-red">{{errorText}}</p>
             </div>
         </div>
+        
+        
+        <div ng-controller="navigationMenuController" class="navigation-menu" style="max-width:600px;">
+            <nav class="{{active}}" ng-click="$event.preventDefault()">
+                <a href="#" class="home" ng-click="active='home'">Home</a>
+                <a href="#" class="projects" ng-click="active='projects'">Projects</a>
+                <a href="#" class="services" ng-click="active='services'">Services</a>
+                <a href="#" class="contact" ng-click="active='contact'">Contact</a>
+            </nav>
+            
+            <p ng-hide="active">Please click a menu item</p>
+            <p ng-show="active">You chose <b>{{active}}</b></p>
+        </div>
+        
         
     </body>
 </html>

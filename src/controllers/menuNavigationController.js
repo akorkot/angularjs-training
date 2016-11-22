@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 
-'use strict';
 
-var app = angular.module("mainApp", []);
-var navigationMenuApp = angular.module("navigationMenu", ["mainApp"]);
+app
+        .controller("navigationMenuController", function($scope) {
+           $scope.someText = "Je suis fonctionnel";
+           
+           $scope.active = "Home";
+        });
