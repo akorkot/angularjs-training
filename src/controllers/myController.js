@@ -22,6 +22,7 @@ app
                 if(searchElement == -1) {
                     $scope.elements = elementProvider.addElement($scope.newElement);
                     $scope.newElement = "";
+                    $scope.errorText = "";
                     $scope.form.$setPristine();
                 } else {
                     $scope.errorText = "Cet élément existe déjà sur la TODO list.";
