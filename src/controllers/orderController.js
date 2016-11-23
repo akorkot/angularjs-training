@@ -7,31 +7,12 @@
 'use strict';
 
 orderApp
-        .controller("orderController", function($scope) {
+        .controller("orderController", function($scope, orderProvider) {
             // Define the model properties. The view will loop
             // through the services array and genreate a li
             // element for every one of its items.
 
-            $scope.services = [
-                    {
-                            name: 'Web Development',
-                            price: 300,
-                            active:true
-                    },{
-                            name: 'Design',
-                            price: 400,
-                            active:false
-                    },{
-                            name: 'Integration',
-                            price: 250,
-                            active:false
-                    },{
-                            name: 'Training',
-                            price: 220,
-                            active:false
-                    }
-            ];
-
+            $scope.services = orderProvider.getAmounts();
             $scope.toggleActive = function(s){
                     s.active = !s.active;
             };
