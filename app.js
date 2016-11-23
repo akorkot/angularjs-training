@@ -10,5 +10,9 @@
 var navigationMenuApp = angular.module("navigationMenu", []);
 var inlineEditorApp = angular.module("inlineEditor", []);
 var orderApp = angular.module("order", []);
+var instantSearchApp = angular.module("instantSearch", []);
 
-var app = angular.module("mainApp", ["navigationMenu", "inlineEditor", "order"]);
+
+
+
+var app = angular.module("mainApp", ["navigationMenu", "inlineEditor", "order", "instantSearch"]);
