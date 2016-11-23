@@ -1,1 +1,1 @@
-# angularjs-training
+# AngularJs  Training
