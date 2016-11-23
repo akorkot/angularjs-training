@@ -552,3 +552,85 @@ section, footer, header, aside, nav{
 	position:relative;
 	padding-top: 150px;
 }
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Cookie);
+
+.order-services {
+    margin-top: 100px;
+}
+
+
+.order-services a, .order-services  a:visited {
+	outline:none;
+	color:#389dc1;
+}
+
+.order-services a:hover{
+	text-decoration:none;
+}
+
+.order-services section, .order-services footer, .order-services header, .order-services aside, .order-services nav{
+	display: block;
+}
+
+/*-------------------------
+	The order form
+--------------------------*/
+
+.order-services form{
+	background-color: #61a1bc;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px #ccc;
+	width: 500px;
+	padding: 35px 60px;
+	margin: 50px auto;
+}
+
+.order-services form h1{
+	color:#fff;
+	font-size:64px;
+	font-family:'Cookie', cursive;
+	font-weight: normal;
+	line-height:1;
+	text-shadow:0 3px 0 rgba(0,0,0,0.1);
+}
+
+.order-services form ul{
+	list-style:none;
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	text-align: left;
+	margin:20px 0 15px;
+}
+
+.order-services form ul li{
+	padding:20px 30px;
+	background-color:#e35885;
+	margin-bottom:8px;
+	box-shadow:0 1px 1px rgba(0,0,0,0.1);
+	cursor:pointer;
+}
+
+.order-services form ul li span{
+	float:right;
+}
+
+.order-services form ul li.active{
+	background-color:#8ec16d;
+}
+
+.order-services div.total{
+	border-top:1px solid rgba(255,255,255,0.5);
+	padding:15px 30px;
+	font-size:20px;
+	font-weight:bold;
+	text-align: left;
+	color:#fff;
+}
+
+.order-services div.total span{
+	float:right;
+}
